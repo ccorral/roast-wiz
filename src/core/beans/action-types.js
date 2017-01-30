@@ -1,0 +1,2 @@
+export const REQUEST_BEANS = 'REQUEST_BEANS';
+export const RECEIVE_BEANS = 'RECEIVE_BEANS';

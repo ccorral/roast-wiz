@@ -1,0 +1,2 @@
+export const REQUEST_ROASTS = 'REQUEST_ROASTS';
+export const RECEIVE_ROASTS = 'RECEIVE_ROASTS';

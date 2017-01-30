@@ -2,12 +2,19 @@ import { isAuthenticated } from 'src/core/auth';
 import App from './app';
 import SignIn from './pages/sign-in';
 import Dashboard from './pages/Dashboard';
+import RoastDetail from './pages/RoastDetail';
+import BeanDetail from './pages/BeanDetail';
+import NewRoast from './pages/NewRoast';
 
 
 export const paths = {
   ROOT: '/',
   SIGN_IN: '/sign-in',
-  DASHBOARD: '/'
+  DASHBOARD: '/',
+  BEAN_DETAIL: '/bean/:id',
+  ROAST_DETAIL: '/roast/:id',
+  NEW_ROAST: '/roast/new',
+  NEW_BEAN: '/bean/new'
 }
 
 
@@ -21,7 +28,6 @@ const requireAuth = getState => {
 
 const requireUnauth = getState => {
   return (nextState, replace) => {
-    console.log(isAuthenticated(getState()));
     if (isAuthenticated(getState())) {
       replace(paths.DASHBOARD)
     }
@@ -44,7 +50,23 @@ export const getRoutes = getState => {
         path: paths.SIGN_IN,
         component: SignIn,
         onEnter: requireUnauth(getState)
-      }
+    },
+      {
+        path: paths.BEAN_DETAIL,
+        component: BeanDetail
+    },
+      {
+        path: paths.ROAST_DETAIL,
+        component: RoastDetail
+    },
+      {
+        path: paths.NEW_ROAST,
+        component: NewRoast
+    },
+    //   {
+    //     path: paths.ROAST_DETAIL,
+    //     component: RoastDetail
+    //   }
     ]
   }
 }

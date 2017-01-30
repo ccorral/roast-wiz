@@ -1,6 +1,6 @@
 export const firebaseConfig = {
-  apiKey: '',
-  authDomain: '',
-  databaseURL: '',
-  storageBucket: ''
+  apiKey: localStorage.getItem('apiKey'),
+  authDomain: localStorage.getItem('authDomain'),
+  databaseURL: localStorage.getItem('databaseURL'),
+  storageBucket: localStorage.getItem('storageBucket')
 };

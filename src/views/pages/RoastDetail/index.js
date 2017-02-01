@@ -19,7 +19,8 @@ import Value from 'grommet/components/Value';
 import Section from 'grommet/components/Section';
 import Label from 'grommet/components/Label';
 
-import Chart, {Axis, Grid, Area, Bar, Line, Marker, MarkerLabel, HotSpots, Base, Layers} from 'grommet/components/chart/Chart';
+// import Chart, {Axis, Grid, Area, Bar, Line, Marker, MarkerLabel, HotSpots, Base, Layers} from 'grommet/components/chart/Chart';
+import Chart from '../../components/Chart';
 
 import Anchor from 'grommet/components/Anchor';
 import Edit from 'grommet/components/icons/base/Edit';
@@ -28,7 +29,6 @@ import Copy from 'grommet/components/icons/base/Copy';
 import { isEmpty } from 'lodash';
 
 export function RoastDetail(props) {
-    console.log(props);
     const loading = isEmpty(props.roast)
     let date_formatted = new Date(props.roast.date).toLocaleDateString("en-US")
     return (
@@ -68,7 +68,9 @@ export function RoastDetail(props) {
                 disabled={false}
                 style={{padding: '8px'}} />
             </Box>
-              <Section colorIndex={'light-2'} style={{width: '100%', height: '320px'}}></Section>
+              <Section style={{width: '100%', height: '320px'}}>
+                  <Chart data={props.roast} />
+              </Section>
               <Section style={{width: '100%', height: '320px'}}>
                   <Split>
                       <Section>

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { authActions, getAuth } from 'src/core/auth';
 import { createSelector } from 'reselect';
 import { paths } from '../routes';
-import SiteHeader from '../components/header';
+import Header from '../components/Header';
 
 import AppShell from 'grommet/components/App';
 
@@ -35,7 +35,7 @@ export class App extends Component {
     return (
       <AppShell inline={true}>
         {auth.authenticated &&
-          <SiteHeader
+          <Header
             authenticated={this.props.auth.authenticated}
             signOut={this.props.signOut}
           />}

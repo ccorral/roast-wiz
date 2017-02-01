@@ -8,6 +8,9 @@ import Search from 'grommet/components/Search';
 import Menu from 'grommet/components/Menu';
 import Pulse from 'grommet/components/icons/Pulse';
 
+import Anchor from 'grommet/components/Anchor';
+import NewIcon from 'grommet/components/icons/base/new';
+
 const NewRoast = ({authenticated, signOut}) => {
   return (
     <Header size="medium">
@@ -18,8 +21,25 @@ const NewRoast = ({authenticated, signOut}) => {
       </Title>
       <Box flex={true} justify='end' direction='row' responsive={false} pad="small">
         {/*<Search inline={true} fill={true} size='medium' placeHolder='Search' dropAlign={{"right": "right"}} />*/}
-        <Link to={'/bean/new'}>
-            <Pulse size="small"/>
+        <Link to={'/new/roast'}>
+        <Anchor icon={<NewIcon />}
+          label='New Roast'
+          animateIcon={true}
+          href='#'
+          primary={false}
+          reverse={false}
+          disabled={false}
+          style={{padding: '8px'}} />
+      </Link>
+      <Link to={'/new/bean'}>
+        <Anchor icon={<NewIcon />}
+          label='New Bean'
+          animateIcon={true}
+          href='#'
+          primary={false}
+          reverse={false}
+          disabled={false}
+          style={{padding: '8px'}} />
         </Link>
         {authenticated ? <Button onClick={signOut} style={{paddingLeft: '20px'}}>Sign out</Button> : null}
       </Box>

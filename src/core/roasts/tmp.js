@@ -1,3 +1,5 @@
+import { temperatures } from './tmp_temperatures.js'
+import { events } from './roast_events.js'
 export const database = {
     data: {
         users: {
@@ -68,24 +70,8 @@ export const database = {
                 weight_in: 250,
                 weight_out: 200,
                 shrink_percentage: '22%',
-                roast_temp: [
-                    {
-                        'time_stamp': '',
-                        temperature: 270// number in fahrenheit
-                    },
-                    {
-                        'time_stamp': '',
-                        temperature: 275// number in fahrenheit
-                    }
-                ],
-                roast_events: {
-                    'TIMESTAMP_ID': {
-                        // event type
-                    },
-                    'TIMESTAMP_ID': {
-                        // event type
-                    }
-                }
+                roast_temp_data: temperatures,
+                roast_events: events
             },
             'roast|2': {
                 id: 'roast|2',
@@ -98,14 +84,8 @@ export const database = {
                 weight_in: 250,
                 weight_out: 200,
                 shrink_percentage: '22%',
-                roast_data: {
-                    'TIMESTAMP_ID': {
-                        // event type
-                    },
-                    'TIMESTAMP_ID': {
-                        // event type
-                    }
-                }
+                roast_temp_data: temperatures,
+                roast_events: events
             },
             'roast|3': {
                 id: 'roast|3',
@@ -118,14 +98,8 @@ export const database = {
                 weight_in: 250,
                 weight_out: 200,
                 shrink_percentage: '22%',
-                roast_data: {
-                    'TIMESTAMP_ID': {
-                        // event type
-                    },
-                    'TIMESTAMP_ID': {
-                        // event type
-                    }
-                }
+                roast_temp_data: temperatures,
+                roast_events: events
             },
             'roast|4': {
                 id: 'roast|4',
@@ -135,14 +109,11 @@ export const database = {
                 end_temp: 305,
                 roast_duration: '09:05',
                 notes: 'Awesome roast. Definitely try again.',
-                roast_data: {
-                    'TIMESTAMP_ID': {
-                        // event type
-                    },
-                    'TIMESTAMP_ID': {
-                        // event type
-                    }
-                }
+                weight_in: 250,
+                weight_out: 200,
+                shrink_percentage: '22%',
+                roast_temp_data: temperatures,
+                roast_events: events
             }
         }
     }
@@ -158,10 +129,10 @@ export const event_types = {
         setting: 50 // number in fahrenheit
     },
     'event|roast_start': {
-        event_type: 'event|start'
+        event_type: 'event|roast_start'
     },
     'event|roast_end': {
-        event_type: 'event|end',
+        event_type: 'event|roast_end',
         setting: 300 // number in fahrenheit
     },
     'event|first_crack_start': {

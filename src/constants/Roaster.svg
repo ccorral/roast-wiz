@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="806px" height="1555px" viewBox="0 0 806 1555" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>roaster</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="roaster" fill="#FFFFFF">
+            <path d="M52,16 C52,16 277.455631,0 384.5,0 C491.544369,0 717,16 717,16 L717,101 C717,101 496.681139,85 384.5,85 C272.318861,85 52,101 52,101 L52,16 Z" id="Rectangle-3"></path>
+            <circle id="Oval" cx="394.5" cy="870.5" r="394.5"></circle>
+            <rect id="Rectangle" x="295" y="387" width="179" height="179" rx="8"></rect>
+            <rect id="Rectangle-2" x="334" y="353" width="101" height="74"></rect>
+            <polygon id="Triangle" transform="translate(384.500000, 264.000000) scale(1, -1) translate(-384.500000, -264.000000) " points="384.5 138 717 390 52 390"></polygon>
+            <path d="M52,112 C52,112 276.955972,96 384.5,96 C492.044028,96 717,112 717,112 L717,138 L52,138 L52,112 Z" id="Rectangle-4"></path>
+            <polygon id="Rectangle-5" points="452 415 497 415 605 365 605 395 498 445 452 445"></polygon>
+            <circle id="Oval-3" cx="628" cy="370" r="30"></circle>
+            <rect id="Rectangle-7" x="174" y="1055" width="457" height="201"></rect>
+            <ellipse id="Oval-4" cx="403" cy="1256.46009" rx="403" ry="42.4600925"></ellipse>
+            <path d="M0,1278 C0,1278 85.0594262,1320.88049 403,1320.88049 C720.940574,1320.88049 806,1278 806,1278 L806,1511.74071 C806,1511.74071 720.940574,1554.6212 403,1554.6212 C85.0594262,1554.6212 0,1511.74071 0,1511.74071 L0,1278 Z" id="Rectangle-8"></path>
+        </g>
+    </g>
+</svg>

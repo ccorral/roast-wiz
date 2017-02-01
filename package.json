@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.22.0",
+    "chart.js": "^2.4.0",
     "grommet": "^1.2.0",
     "immutable": "^3.8.1",
     "lodash": "^4.17.4",

@@ -19,23 +19,17 @@ import Value from 'grommet/components/Value';
 import Section from 'grommet/components/Section';
 import Label from 'grommet/components/Label';
 
-import Chart, {Axis, Grid, Area, Bar, Line, Marker, MarkerLabel, HotSpots, Base, Layers} from 'grommet/components/chart/Chart';
-
-import Anchor from 'grommet/components/Anchor';
-import Edit from 'grommet/components/icons/base/Edit';
-import Copy from 'grommet/components/icons/base/Copy';
-
 import { isEmpty } from 'lodash';
 
-export function NewRoast(props) {
+export function NewBean(props) {
     console.log(props);
-    return (      
+    return (
           <Article>
           </Article>
     );
 }
 
-NewRoast.propTypes = {
+NewBean.propTypes = {
 
 };
 
@@ -52,4 +46,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewRoast);
+export default connect(mapStateToProps, mapDispatchToProps)(NewBean);

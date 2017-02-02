@@ -7,7 +7,7 @@ import Dashboard from './pages/Dashboard';
 import RoastDetail from './pages/RoastDetail';
 import BeanDetail from './pages/BeanDetail';
 import NewRoast from './pages/NewRoast';
-import NewBean from './pages/NewBean';
+import BeanForm from './pages/BeanForm';
 
 
 export const paths = {
@@ -17,7 +17,8 @@ export const paths = {
     BEAN_DETAIL: '/bean/:id',
     ROAST_DETAIL: '/roast/:id',
     NEW_ROAST: '/new/roast',
-    NEW_BEAN: '/new/bean'
+    NEW_BEAN: '/new/bean',
+    EDIT_BEAN: '/edit/bean'
 }
 
 
@@ -62,7 +63,10 @@ export const getRoutes = getState => {
                 component: NewRoast
             }, {
                 path: paths.NEW_BEAN,
-                component: NewBean
+                component: BeanForm
+            }, {
+                path: paths.EDIT_BEAN,
+                component: BeanForm
             },
             //   {
             //     path: paths.ROAST_DETAIL,

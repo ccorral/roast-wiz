@@ -11,7 +11,7 @@ import Pulse from 'grommet/components/icons/Pulse';
 import Anchor from 'grommet/components/Anchor';
 import NewIcon from 'grommet/components/icons/base/new';
 
-const NewRoast = ({authenticated, signOut}) => {
+const Nav = ({authenticated, signOut}) => {
   return (
     <Header size="medium">
       <Title>
@@ -21,35 +21,35 @@ const NewRoast = ({authenticated, signOut}) => {
       </Title>
       <Box flex={true} justify='end' direction='row' responsive={false} pad="small">
         {/*<Search inline={true} fill={true} size='medium' placeHolder='Search' dropAlign={{"right": "right"}} />*/}
-        <Link to={'/new/roast'}>
-        <Anchor icon={<NewIcon />}
+        <Anchor
           label='New Roast'
+          path={'/new/roast'}
           animateIcon={true}
           href='#'
           primary={false}
           reverse={false}
           disabled={false}
-          style={{padding: '8px'}} />
-      </Link>
-      <Link to={'/new/bean'}>
-        <Anchor icon={<NewIcon />}
+          style={{paddingRight: '7px', textAlign: 'middle'}}
+        />
+        <Anchor
           label='New Bean'
+          path={'/new/bean'}
           animateIcon={true}
           href='#'
           primary={false}
           reverse={false}
           disabled={false}
-          style={{padding: '8px'}} />
-        </Link>
+          style={{paddingRight: '7px', textAlign: 'middle'}}
+        />
         {authenticated ? <Button onClick={signOut} style={{paddingLeft: '20px'}}>Sign out</Button> : null}
       </Box>
     </Header>
   );
 };
 
-NewRoast.propTypes = {
+Nav.propTypes = {
   authenticated: PropTypes.bool.isRequired,
   signOut: PropTypes.func.isRequired
 };
 
-export default NewRoast;
+export default Nav;

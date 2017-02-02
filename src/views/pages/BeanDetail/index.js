@@ -14,6 +14,8 @@ import Heading from 'grommet/components/Heading';
 import Paragraph from 'grommet/components/Paragraph';
 import Split from 'grommet/components/Split';
 import Spinning from 'grommet/components/icons/Spinning';
+import Anchor from 'grommet/components/Anchor';
+import Edit from 'grommet/components/icons/base/Edit';
 
 import { isEmpty } from 'lodash';
 
@@ -37,6 +39,14 @@ export function BeanDetail(props) {
               <Paragraph style={{textAlign: 'center'}}>
                 {props.bean.description}
               </Paragraph>
+              <Anchor icon={<Edit />}
+                label='Edit'
+                animateIcon={true}
+                path='/edit/bean'
+                primary={false}
+                reverse={false}
+                disabled={false}
+                style={{padding: '8px'}} />
           </Box>
           <Split>
               <BeanDescription {...props} />

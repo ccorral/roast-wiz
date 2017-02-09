@@ -1,15 +1,12 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 import Header from 'grommet/components/Header';
-import Button from 'grommet/components/Button';
 import Box from 'grommet/components/Box';
 import Title from 'grommet/components/Title';
 import Search from 'grommet/components/Search';
-import Menu from 'grommet/components/Menu';
-import Pulse from 'grommet/components/icons/Pulse';
 
 import Anchor from 'grommet/components/Anchor';
-import NewIcon from 'grommet/components/icons/base/new';
+import LogoutIcon from 'grommet/components/icons/base/Logout';
 
 const Nav = ({authenticated, signOut}) => {
   return (
@@ -41,7 +38,7 @@ const Nav = ({authenticated, signOut}) => {
           disabled={false}
           style={{paddingRight: '7px', textAlign: 'middle'}}
         />
-        {authenticated ? <Button onClick={signOut} style={{paddingLeft: '20px'}}>Sign out</Button> : null}
+        {authenticated ? <Anchor icon={<LogoutIcon size='small' />} label='Sign Out' animateIcon={true} primary={false} onClick={signOut} style={{paddingLeft: '20px'}} /> : null}
       </Box>
     </Header>
   );

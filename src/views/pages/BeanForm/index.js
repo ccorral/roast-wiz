@@ -6,18 +6,6 @@ import { authActions } from 'src/core/auth';
 import { beanActions, getBeans, isFetchingBeans, getBeanDetail, getBeanRoastList } from 'src/core/beans';
 import { roastActions, getRoasts, isFetchingRoasts, getRoastDetail, getBeanForRoast } from 'src/core/roasts';
 
-import BeanDescription from '../../components/BeanDescription';
-
-
-import Box from 'grommet/components/Box';
-import Article from 'grommet/components/Article';
-import Paragraph from 'grommet/components/Paragraph';
-import Split from 'grommet/components/Split';
-import Spinning from 'grommet/components/icons/Spinning';
-import Value from 'grommet/components/Value';
-import Section from 'grommet/components/Section';
-import Label from 'grommet/components/Label';
-
 import Header from 'grommet/components/Header';
 import Heading from 'grommet/components/Heading';
 import Footer from 'grommet/components/Footer';
@@ -73,7 +61,7 @@ class BeanForm extends Component {
         <Form pad={{ horizontal: 'large', vertical: 'none' }} style={{width: '100%'}}>
             <Header>
                 <Heading>
-                    Sample Header
+                    New Bean
                 </Heading>
             </Header>
             <FormField label='Name' style={{margin: '10px'}}>

@@ -4,7 +4,7 @@ let SecondsTohhmmss = function(totalSeconds) {
   let seconds = totalSeconds - (hours * 3600) - (minutes * 60);
 
   // round seconds
-  seconds = Math.round(seconds * 100) / 100
+  seconds = ((seconds * 100) / 100).toFixed(0)
 
   let result = (hours < 10 ? "0" + hours : hours);
       result += ":" + (minutes < 10 ? "0" + minutes : minutes);

@@ -7,31 +7,20 @@ import { beanActions, getBeans, isFetchingBeans, getBeanDetail, getBeanRoastList
 import { roastActions, getRoasts, isFetchingRoasts, getRoastDetail, getBeanForRoast } from 'src/core/roasts';
 
 import BeanDescription from '../../components/BeanDescription';
+import Timer from '../../components/Timer';
+import RoastControls from '../../components/RoastControls';
 
-import Button from 'grommet/components/Button';
 import Box from 'grommet/components/Box';
-import Article from 'grommet/components/Article';
-import Heading from 'grommet/components/Heading';
-import Paragraph from 'grommet/components/Paragraph';
-import Split from 'grommet/components/Split';
-import Spinning from 'grommet/components/icons/Spinning';
-import Value from 'grommet/components/Value';
 import Section from 'grommet/components/Section';
-import Label from 'grommet/components/Label';
-
-import Chart, {Axis, Grid, Area, Bar, Line, Marker, MarkerLabel, HotSpots, Base, Layers} from 'grommet/components/chart/Chart';
-
-import Anchor from 'grommet/components/Anchor';
-import Edit from 'grommet/components/icons/base/Edit';
-import Copy from 'grommet/components/icons/base/Copy';
-
-import { isEmpty } from 'lodash';
 
 export function NewRoast(props) {
-    console.log(props);
-    return (      
-          <Article>
-          </Article>
+    return (
+          <Box align='center' full='vertical' >
+            <Timer>
+                <RoastControls />
+            </Timer>
+            <Section pad='small' margin='medium' style={{width: '100%', height: '400px', backgroundColor: '#f6f6f6'}} />
+          </Box>
     );
 }
 
